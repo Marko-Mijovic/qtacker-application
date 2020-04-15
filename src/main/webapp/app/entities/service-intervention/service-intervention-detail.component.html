@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="serviceIntervention">
+            <h2><span jhiTranslate="qtackerApplicationApp.serviceIntervention.detail.title">Service Intervention</span> {{ serviceIntervention.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="qtackerApplicationApp.serviceIntervention.dateTime">Date Time</span></dt>
+                <dd>
+                    <span>{{ serviceIntervention.dateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="qtackerApplicationApp.serviceIntervention.price">Price</span></dt>
+                <dd>
+                    <span>{{ serviceIntervention.price }}</span>
+                </dd>
+                <dt><span jhiTranslate="qtackerApplicationApp.serviceIntervention.description">Description</span></dt>
+                <dd>
+                    <span>{{ serviceIntervention.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="qtackerApplicationApp.serviceIntervention.device">Device</span></dt>
+                <dd>
+                    <div *ngIf="serviceIntervention.deviceId">
+                        <a [routerLink]="['/device', serviceIntervention.deviceId, 'view']">{{ serviceIntervention.deviceId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="qtackerApplicationApp.serviceIntervention.companyExtern">Company Extern</span></dt>
+                <dd>
+                    <div *ngIf="serviceIntervention.companyExternId">
+                        <a [routerLink]="['/company-extern', serviceIntervention.companyExternId, 'view']">{{ serviceIntervention.companyExternId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/service-intervention', serviceIntervention.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

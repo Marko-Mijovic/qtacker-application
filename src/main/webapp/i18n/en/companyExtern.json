@@ -1,0 +1,22 @@
+{
+  "qtackerApplicationApp": {
+    "companyExtern": {
+      "home": {
+        "title": "Company Externs",
+        "createLabel": "Create a new Company Extern",
+        "createOrEditLabel": "Create or edit a Company Extern",
+        "search": "Search for Company Extern",
+        "notFound": "No Company Externs found"
+      },
+      "created": "A new Company Extern is created with identifier {{ param }}",
+      "updated": "A Company Extern is updated with identifier {{ param }}",
+      "deleted": "A Company Extern is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Company Extern {{ id }}?"
+      },
+      "detail": {
+        "title": "Company Extern"
+      }
+    }
+  }
+}

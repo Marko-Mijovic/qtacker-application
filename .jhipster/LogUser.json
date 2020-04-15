@@ -1,0 +1,21 @@
+{
+    "name": "LogUser",
+    "fields": [
+        {
+            "fieldName": "dateTimeLog",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200415003700",
+    "entityTableName": "log_user",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

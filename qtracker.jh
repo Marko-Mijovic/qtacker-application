@@ -1,0 +1,66 @@
+entity Address {
+	city String
+    street String
+    postalCode String
+}
+
+entity Company {
+	companyName String
+}
+
+entity CompanyExtern{
+
+}
+
+entity Department{
+	displayName String
+    location String
+    headOfDepartment String
+    description String
+}
+
+entity Device{
+
+}
+
+entity LogUser{
+	dateTimeLog Instant
+}
+
+entity Maker{
+	makerName String
+}
+
+entity Model{
+	modelName String
+}
+
+entity ServiceIntervention{
+	dateTime Instant
+    price Double
+    description String
+}
+
+relationship OneToOne {
+	Address{company} to Company
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Company{departments} to Department
+    Maker{models} to Model
+}
+
+relationship ManyToOne {
+	ServiceIntervention{device} to Device
+    ServiceIntervention{companyExtern} to CompanyExtern
+}
+
+// Set pagination options
+paginate Address, Company with infinite-scroll
+paginate CompanyExtern, Department, Device, ServiceIntervention, Maker, Model, LogUser  with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+service all with serviceImpl

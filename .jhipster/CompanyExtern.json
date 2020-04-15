@@ -1,0 +1,16 @@
+{
+    "name": "CompanyExtern",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20200415003400",
+    "entityTableName": "company_extern",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
