@@ -1,0 +1,27 @@
+{
+  "qtackerApplicationApp": {
+    "serviceIntervention": {
+      "home": {
+        "title": "Service Interventions",
+        "createLabel": "Create a new Service Intervention",
+        "createOrEditLabel": "Create or edit a Service Intervention",
+        "search": "Search for Service Intervention",
+        "notFound": "No Service Interventions found"
+      },
+      "created": "A new Service Intervention is created with identifier {{ param }}",
+      "updated": "A Service Intervention is updated with identifier {{ param }}",
+      "deleted": "A Service Intervention is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Service Intervention {{ id }}?"
+      },
+      "detail": {
+        "title": "Service Intervention"
+      },
+      "dateTime": "Date Time",
+      "price": "Price",
+      "description": "Description",
+      "device": "Device",
+      "companyExtern": "Company Extern"
+    }
+  }
+}

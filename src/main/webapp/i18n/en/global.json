@@ -7,6 +7,15 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "address": "Address",
+        "company": "Company",
+        "companyExtern": "Company Extern",
+        "department": "Department",
+        "device": "Device",
+        "logUser": "Log User",
+        "maker": "Maker",
+        "model": "Model",
+        "serviceIntervention": "Service Intervention",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
