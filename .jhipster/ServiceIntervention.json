@@ -1,0 +1,44 @@
+{
+    "name": "ServiceIntervention",
+    "fields": [
+        {
+            "fieldName": "dateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "device",
+            "otherEntityRelationshipName": "serviceIntervention",
+            "relationshipName": "device",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "companyExtern",
+            "otherEntityRelationshipName": "serviceIntervention",
+            "relationshipName": "companyExtern",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200415002200",
+    "entityTableName": "service_intervention",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Model",
+    "fields": [
+        {
+            "fieldName": "modelName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "maker",
+            "otherEntityRelationshipName": "models",
+            "relationshipName": "maker",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200415002100",
+    "entityTableName": "model",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

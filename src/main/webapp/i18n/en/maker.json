@@ -1,0 +1,24 @@
+{
+  "qtackerApplicationApp": {
+    "maker": {
+      "home": {
+        "title": "Makers",
+        "createLabel": "Create a new Maker",
+        "createOrEditLabel": "Create or edit a Maker",
+        "search": "Search for Maker",
+        "notFound": "No Makers found"
+      },
+      "created": "A new Maker is created with identifier {{ param }}",
+      "updated": "A Maker is updated with identifier {{ param }}",
+      "deleted": "A Maker is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Maker {{ id }}?"
+      },
+      "detail": {
+        "title": "Maker"
+      },
+      "makerName": "Maker Name",
+      "models": "Models"
+    }
+  }
+}

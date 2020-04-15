@@ -1,0 +1,28 @@
+{
+    "name": "Maker",
+    "fields": [
+        {
+            "fieldName": "makerName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "model",
+            "otherEntityRelationshipName": "maker",
+            "relationshipName": "models"
+        }
+    ],
+    "changelogDate": "20200415002000",
+    "entityTableName": "maker",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

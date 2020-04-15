@@ -1,0 +1,16 @@
+{
+    "name": "Device",
+    "fields": [],
+    "relationships": [],
+    "changelogDate": "20200415001800",
+    "entityTableName": "device",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

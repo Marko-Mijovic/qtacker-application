@@ -1,0 +1,108 @@
+package com.firedata.qtacker.domain;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+
+import org.springframework.data.elasticsearch.annotations.FieldType;
+import java.io.Serializable;
+import java.util.Objects;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * A Company.
+ */
+@Entity
+@Table(name = "company")
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@org.springframework.data.elasticsearch.annotations.Document(indexName = "company")
+public class Company implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
+    private Long id;
+
+    @Column(name = "company_name")
+    private String companyName;
+
+    @OneToMany(mappedBy = "company")
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Department> departments = new HashSet<>();
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public Company companyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public Set<Department> getDepartments() {
+        return departments;
+    }
+
+    public Company departments(Set<Department> departments) {
+        this.departments = departments;
+        return this;
+    }
+
+    public Company addDepartments(Department department) {
+        this.departments.add(department);
+        department.setCompany(this);
+        return this;
+    }
+
+    public Company removeDepartments(Department department) {
+        this.departments.remove(department);
+        department.setCompany(null);
+        return this;
+    }
+
+    public void setDepartments(Set<Department> departments) {
+        this.departments = departments;
+    }
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Company)) {
+            return false;
+        }
+        return id != null && id.equals(((Company) o).id);
+    }
+
+    @Override
+    public int hashCode() {
+        return 31;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+            "id=" + getId() +
+            ", companyName='" + getCompanyName() + "'" +
+            "}";
+    }
+}
